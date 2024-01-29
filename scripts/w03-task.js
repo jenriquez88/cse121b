@@ -68,15 +68,18 @@ document.querySelector('#array').textContent = numbersArray;
 /* Output Odds Only Array */
 let oddNumbers = numbersArray.filter(number =>number%2 === 1);
 document.querySelector("#odds").innerHTML = oddNumbers;
+
 /* Output Evens Only Array */
 document.querySelector("#evens").innerHTML = numbersArray.filter(number => number %2 === 0);
 
 /* Output Sum of Org. Array */
 let sumOfArray = numbersArray.reduce((sum,number) => sum+number, 0);
 document.querySelector("#sumOfArray").innerHTML = sumOfArray;
+
 /* Output Multiplied by 2 Array */
 let multipliedArray = numbersArray.map(number => number*2);
 document.querySelector("#multiplied").innerHTML = multipliedArray;
+
 /* Output Sum of Multiplied by 2 Array */
 let sumOfMultiplied = multipliedArray.reduce((sum, number) =>sum + number,0);
 document.querySelector("#sumOfMultiplied").innerHTML = sumOfMultiplied;
