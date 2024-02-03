@@ -4,21 +4,25 @@ let photoElement = document.querySelector('#photo');
 /* Populate Profile Object with placesLive objects */
 let myProfile = {
     name: 'Jorge Enriquez',
+
     photo: {
         src: 'images/picture.jpg',
         alt: 'My profile picture'
     },
+
     favoriteFoods: [
         'Ice Cream ',
         'Burgers ',
         'Tacos ',
         'Tamales',
         'Pizza '],
+
     hobbies: [
         'Squash',
         'Netflix',
         'Hiking',
         'Eating'],
+
     placesLived: []
 
 }
@@ -39,6 +43,7 @@ myProfile.placesLived.push(
 /* DOM Manipulation - Output */
 /* Name */
 document.querySelector('#name').textContent = myProfile.name;
+
 /* Photo with attributes */
 photoElement.src = myProfile.photo.src;
 photoElement.alt = myProfile.photo.alt;
