@@ -37,9 +37,9 @@ function reset() {
 /* filterTemples Function */
 const filterTemples = (temples) => {
     reset();
-    const filter = document.getElementById('filtered').value;
+    const sortBy = document.getElementById('filtered').value;
 
-    switch (filter) {
+    switch (sortBy) {
         case 'utah':
             displayTemples(temples.filter(temple =>temple.location.includes('Utah')));
             break;
