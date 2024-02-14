@@ -1,9 +1,7 @@
 /* W05: Programming Tasks */
-
 /* Declare and initialize global variables */
 const templesElements = document.getElementById('temples');
 let templeList = [];
-
 const url = ('https://byui-cse.github.io/cse121b-ww-course/resources/temples.json');
 /* async displayTemples Function */
 const displayTemples = (temples) => {
@@ -19,7 +17,6 @@ const displayTemples = (temples) => {
         templesElements.appendChild(articleElement);
     });
 };
-
 /* async getTemples Function using fetch()*/
 const getTemples = async ()=> {
     const response = await fetch("https://byui-cse.github.io/cse121b-ww-course/resources/temples.json");
@@ -28,17 +25,14 @@ const getTemples = async ()=> {
         displayTemples(templeList);
     }
 };
-
 /* reset Function */
 function reset() {
     templesElements.innerHTML = '';
 }
-
 /* filterTemples Function */
 const filterTemples = (temples) => {
     reset();
     const sortBy = document.getElementById('filtered').value;
-
     switch (sortBy) {
         case 'utah':
             displayTemples(temples.filter(temple =>temple.location.includes('Utah')));
@@ -54,9 +48,6 @@ const filterTemples = (temples) => {
             displayTemples(temples);
     }   
 }
-
-
-
 /* Event Listener */
 document.querySelector('#filtered').addEventListener('change',()=>{
     filterTemples(templeList);
