@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buscador de Usuarios</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Jorge Enriquez's || User finder || BYU-I CSE121B">
+    <meta name="author" content="Jorge Enriquez">
+    <title>User finder</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+    <div class="content">
+        <h1>Find the person you need for the job</h1>
+        <h2>You can search by:
+            Name, Email, Company, City or Website
+        </h2>
+        <div class="search-container">
+            <input type="text" id="input" placeholder="Search" onkeyup="searchUsers()"></div>
 
-    <div class="search-container">
-        <input type="text" id="nameInput" placeholder="Buscar por nombre">
-        <input type="text" id="genderInput" placeholder="Buscar por género">
-        <input type="text" id="stateInput" placeholder="Buscar por estado">
-        <button onclick="searchUsers()">Buscar</button>
+        <div id="results" class="user-grid"></div>
     </div>
-
-    <div id="userResults" class="user-grid"></div>
-
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
 
 </body>
+<footer>
+    <div>
+        <p>©2024 || User finder 👩🏻👨🏻 Jorge Enriquez </p>
+    </div>
+</footer>
+
 </html>
